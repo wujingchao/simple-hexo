@@ -29,7 +29,6 @@ H3 {
     margin-top: 40px;
     margin-bottom: 30px;
     border-bottom: 1px LightGrey solid;
-    width: 80%;
     line-height: 150%;
     color: #666666;
 }
@@ -60,7 +59,7 @@ blockquote {
 a {
     text-decoration: none;
     cursor: crosshair;
-    border-bottom: 1px dashed Red;
+    border-bottom: 1px dashed Grey;
     padding: 1px;
     color: black;
 }
@@ -85,8 +84,4 @@ img {
 
 hr {
     color: LightGrey;
-}
-
-p {
-    text-indent: 2em;
 }
