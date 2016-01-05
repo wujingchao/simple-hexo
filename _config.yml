@@ -7,9 +7,14 @@ favicon: /favicon.ico
 # Set default keywords (Use a comma to separate)
 keywords: "Android"
 
+debug: true
 
 
 menu:
   GitHub: https:github.com/wujingchao
+
+plugins: 
+	- hexo-generator-sitemap
+	- hexo-generator-feed
 
 
