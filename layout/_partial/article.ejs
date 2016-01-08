@@ -6,6 +6,22 @@
 <%- post.content %>
 <% } %>
 
+<%if(!is_home()) { %>
+  <script>
+      $(".diagram_sequence").sequenceDiagram({theme: 'simple'});
+      var size = $(".diagram_flow").size();
+      for (var i = 0; i < size; i ++) {
+          var node = $(".diagram_flow").get(i);
+          var textContent = node.textContent;
+          node.textContent = null;
+          node.id = "canvas" + i;
+          var chart = flowchart.parse(textContent);
+          chart.drawSVG(node.id);
+      }
+  </script>
+<%}%>
+
+
 <% if (!theme.debug && !index && post.comments && config.duoshuo_shortname){ %>
   <section id="comments">
   <!-- 多说评论框 start -->
@@ -26,9 +42,3 @@
   <!-- 多说公共JS代码 end -->
   </section>
 <% } %>
-
-<%if(!is_home()) { %>
-  <script>
-      $(".diagram").sequenceDiagram({theme: 'simple'});
-  </script>
-<%}%>
