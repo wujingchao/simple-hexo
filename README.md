@@ -7,7 +7,7 @@
 - flowchart-latest.js
 
 直接在post里使用:
- - 时序图
+- 时序图
 ```
 {% raw %}
 <div class="diagram_sequence">
@@ -31,7 +31,6 @@ sub1=>subroutine: My Subroutine
 cond=>condition: Yes
 or No?:>http://www.google.com
 io=>inputoutput: catch something...
-
 st->op1->cond
 cond(yes)->io->e
 cond(no)->sub1(right)->op1
