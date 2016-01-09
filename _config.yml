@@ -7,7 +7,7 @@ favicon: /favicon.ico
 # Set default keywords (Use a comma to separate)
 keywords: "Android"
 
-debug: true
+debug: false
 
 
 menu:
