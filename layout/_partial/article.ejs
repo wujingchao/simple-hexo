@@ -5,29 +5,9 @@
 <% } else { %>
 <%- post.content %>
 <% } %>
-
-<%if(!is_home()) { %>
-  <script>
-      $(".diagram_sequence").sequenceDiagram({theme: 'simple'});
-      var size = $(".diagram_flow").size();
-      for (var i = 0; i < size; i ++) {
-          var node = $(".diagram_flow").get(i);
-          var textContent = node.textContent;
-          node.textContent = null;
-          node.id = "canvas" + i;
-          var chart = flowchart.parse(textContent);
-          chart.drawSVG(node.id);
-      }
-  </script>
-<%}%>
-
-
 <% if (!theme.debug && !index && post.comments && config.duoshuo_shortname){ %>
   <section id="comments">
-  <!-- 多说评论框 start -->
   <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
   var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
     (function() {
@@ -39,6 +19,5 @@
        || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
     </script>
-  <!-- 多说公共JS代码 end -->
   </section>
 <% } %>

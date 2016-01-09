@@ -85,3 +85,7 @@ img {
 hr {
     color: LightGrey;
 }
+
+.diagram_flow {
+    visibility: hidden;
+}
