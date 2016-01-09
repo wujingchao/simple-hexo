@@ -8,6 +8,8 @@ $(document).ready(function() {
           node.id = "canvas" + i;
           $("#" + node.id).css("visibility","visible");
           var chart = flowchart.parse(textContent);
-          chart.drawSVG(node.id);
+          chart.drawSVG(node.id,{
+            'line-width': 1.5,
+          });
       }
 }); 
