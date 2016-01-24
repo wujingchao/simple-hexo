@@ -1,4 +1,7 @@
 $(document).ready(function() { 
+     $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+     prettyPrint();
+
 	  $(".diagram_sequence").sequenceDiagram({theme: 'simple'});
       var size = $(".diagram_flow").size();
       for (var i = 0; i < size; i ++) {

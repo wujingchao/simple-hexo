@@ -5,7 +5,7 @@
 - underscore-min.js 
 - sequence-diagram-min.js 
 - flowchart-latest.js
-
+##### 3.使用google-code-prettify来高亮代码(需要禁用原来的高亮插件)
 直接在post里使用:
 - 时序图
 ```
