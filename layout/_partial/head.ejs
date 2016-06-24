@@ -1,0 +1,41 @@
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <%if(is_home()) { %>
+    <%- css('css/bootstrap.min.css')%>
+    <%- css('css/bootstrap-theme.min.css')%>
+    <%- css('css/home.css')%>
+	<%} else {%>
+    <%- css('css/main.css')%>
+    <%- css('css/style.css')%>
+    <%- css('prettify/tomorrow.css')%>
+    <%- js('js/jquery-2.1.4.min.js')%>
+    <%- js('js/raphael-min.js')%>
+    <%- js('js/underscore-min.js')%>
+    <%- js('js/sequence-diagram-min.js')%>
+    <%- js('js/flowchart-latest.js') %>
+    <%- js('prettify/prettify.js') %>
+    <%- js('js/common.js') %>
+    <%}%>
+    <%if(theme.favicon){ %>
+    <link rel="shortcut icon" type="image/x-icon" href="<%- url_for(theme.favicon)%>?v=<%- theme.version %>"/>
+    <%}%>
+    <%if(!theme.debug){%>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-71897482-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+<%}%>
+    <%
+    var title = page.title;
+        if(is_home()) {
+        title = config.title
+        }
+    %>
+    <title><% if (title){ %><%= title %><% } %></title>
+</head>
+

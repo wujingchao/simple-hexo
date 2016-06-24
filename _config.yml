@@ -1,0 +1,18 @@
+# when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
+
+version: 2.0
+# Place your favicon.ico to /source directory.
+favicon: /favicon.ico
+
+# Set default keywords (Use a comma to separate)
+keywords: "Android"
+
+debug: false
+
+menu:
+  简书: http://www.jianshu.com/users/01e73279ab1a/latest_articles
+  GitHub: https:github.com/wujingchao
+
+plugins: 
+	- hexo-generator-sitemap
+	- hexo-generator-feed
