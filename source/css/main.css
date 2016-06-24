@@ -60,7 +60,11 @@ a {
     text-decoration: none;
     cursor: crosshair;
     border-bottom: 1px dashed Grey;
+<<<<<<< HEAD
     padding: 0px;
+=======
+    padding: 1px;
+>>>>>>> 8a652121e27bfe3a1f09d0a6ffb6a8eca0b4e361
     color: black;
 }
 
