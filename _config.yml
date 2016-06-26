@@ -10,17 +10,9 @@ keywords: "Android"
 debug: false
 
 menu:
-<<<<<<< HEAD
   简书: http://www.jianshu.com/users/01e73279ab1a/latest_articles
-=======
->>>>>>> 8a652121e27bfe3a1f09d0a6ffb6a8eca0b4e361
   GitHub: https:github.com/wujingchao
 
 plugins: 
 	- hexo-generator-sitemap
 	- hexo-generator-feed
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 8a652121e27bfe3a1f09d0a6ffb6a8eca0b4e361
