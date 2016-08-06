@@ -7,6 +7,10 @@ a {
     display: block;
 }
 
+.panel-title a {
+    display: initial;
+}
+
 .title {
     cursor: pointer;
 }
@@ -31,5 +35,9 @@ li.title:hover {
 }
 
 .row {
-    margin-top: 5%;
+    margin-top: 2%;
+}
+
+.panel-title {
+    font-size: 17px;
 }

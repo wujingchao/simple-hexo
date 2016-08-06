@@ -1,11 +1,15 @@
 body {
     font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-size: 17px;
-    margin: 5% 20% 5% 20%;
+    margin: 2% 20% 5% 20%;
     padding: 2% 5% 5% 5%;
     width: 50%;
     line-height: 150%;
     border: 1px solid LightGrey;
+}
+
+p {
+	text-align: justify;
 }
 
 H1 {
@@ -42,6 +46,13 @@ H4 {
     width: 80%;
     line-height: 150%;
     color: #666666;
+    font-size: 20px;
+}
+
+H5 {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti, SimSun, serif;
+    color: #666666;
+    font-size: 17px;
 }
 
 

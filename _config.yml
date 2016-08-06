@@ -10,8 +10,8 @@ keywords: "Android"
 debug: false
 
 menu:
-  简书: http://www.jianshu.com/users/01e73279ab1a/latest_articles
   GitHub: https:github.com/wujingchao
+  简书: http://www.jianshu.com/users/01e73279ab1a/latest_articles
 
 plugins: 
 	- hexo-generator-sitemap
