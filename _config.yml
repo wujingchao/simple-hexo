@@ -10,8 +10,9 @@ keywords: "Android"
 debug: false
 
 menu:
-  GitHub: https:github.com/wujingchao
+  GitHub: https://github.com/wujingchao
   简书: http://www.jianshu.com/users/01e73279ab1a/latest_articles
+  Email: mailto:wujingchao92@gmail.com
 
 plugins: 
 	- hexo-generator-sitemap

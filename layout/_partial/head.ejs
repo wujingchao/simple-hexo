@@ -2,6 +2,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="wujingchao92@gmail.com"/>
     <meta name="description" content="<%= page.title %>"/>
+    <%- js('js/less.min.js') %>
     <%if(is_home()) { %>
     <%- css('css/bootstrap.min.css')%>
     <%- css('css/bootstrap-theme.min.css')%>
@@ -17,9 +18,7 @@
     <%- js('js/flowchart-latest.js') %>
     <%- js('prettify/prettify.js') %>
     <%- js('js/common.js') %>
-    <%}%>
-    <%if(theme.favicon){ %>
-    <link rel="shortcut icon" type="image/x-icon" href="<%- url_for(theme.favicon)%>?v=<%- theme.version %>"/>
+    <%}%><%if(theme.favicon){ %><link rel="shortcut icon" type="image/x-icon" href="<%- url_for(theme.favicon)%>?v=<%- theme.version %>"/>
     <%}%>
     <%if(!theme.debug){%>
     <script>
@@ -27,7 +26,6 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-71897482-1', 'auto');
       ga('send', 'pageview');
     </script>
@@ -39,5 +37,6 @@
         }
     %>
     <title><% if (title){ %><%= title %><% } %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
 </head>
 
