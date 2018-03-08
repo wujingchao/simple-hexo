@@ -40,3 +40,5 @@ cond(no)->sub1(right)->op1
 
 ##### 3.使用google-code-prettify来高亮代码(需要禁用原来的高亮插件)
 
+##### 4.增加响应式布局，对移动设备的支持
+
