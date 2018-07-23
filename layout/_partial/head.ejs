@@ -9,7 +9,6 @@
     <%- css('css/home.css')%>
 	<%} else {%>
     <%- css('css/main.css')%>
-    <%- css('css/style.css')%>
     <%- css('prettify/tomorrow.css')%>
     <%- js('js/jquery-2.1.4.min.js')%>
     <%- js('js/raphael-min.js')%>
@@ -18,6 +17,14 @@
     <%- js('js/flowchart-latest.js') %>
     <%- js('prettify/prettify.js') %>
     <%- js('js/common.js') %>
+    <%- js('js/gitment.browser.js') %>
+    <%- css('css/default.css')%>
+    <%- css('lib/fancybox/dist/jquery.fancybox.css')%>
+
+    <%- js('lib/fancybox/dist/jquery.fancybox.js') %>
+
+    <%- css('css/style.css')%>
+
     <%}%><%if(theme.favicon){ %><link rel="shortcut icon" type="image/x-icon" href="<%- url_for(theme.favicon)%>?v=<%- theme.version %>"/>
     <%}%>
     <%if(!theme.debug){%>

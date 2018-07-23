@@ -5,19 +5,61 @@
 <% } else { %>
 <%- post.content %>
 <% } %>
-<% if (!theme.debug && !index && post.comments && config.duoshuo_shortname){ %>
-  <section id="comments">
-  <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
-  <script type="text/javascript">
-  var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0] 
-       || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+
+<script>
+  //copy from http://tianma.space/post/2208308547/index.html
+
+  $(document).ready(function() {
+    wrapImageWithFancyBox();
+  });
+
+ /**
+ * Wrap images with fancybox support.
+ */
+ function wrapImageWithFancyBox() {
+     $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menu img").each(function() {
+ 
+         var $image = $(this);
+         var imageCaption = $image.attr('alt');
+         var $imageWrapLink = $image.parent('a');
+ 
+         if ($imageWrapLink.size() < 1) {
+             var src = this.getAttribute('src');
+             var idx = src.lastIndexOf('?');
+             if (idx != -1) {
+                 src = src.substring(0, idx);
+             }
+             $imageWrapLink = $image.wrap('<a href="' + src + '"></a>').parent('a');
+         }
+ 
+         $imageWrapLink.attr('data-fancybox', 'images');
+         if (imageCaption) {
+             $imageWrapLink.attr('data-caption', imageCaption);
+         }
+ 
+     });
+ 
+     $().fancybox({
+         selector : '[data-fancybox="images"]',
+         hash : false,
+         loop : false,
+         
+     });
+ }
+</script>
+
+<% if (!index && config.git_owner){ %>
+    <div id="container"></div>
+    <script>
+    var gitment = new Gitment({
+
+      owner: '<%= config.git_owner %>',
+      repo: '<%= config.git_comment_repo %>',
+      oauth: {
+        client_id: '<%= config.git_client_id %>',
+        client_secret: '<%= config.git_client_secret %>',
+      },
+    })
+    gitment.render('container')
     </script>
-  </section>
 <% } %>
